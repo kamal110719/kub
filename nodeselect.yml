@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ngnix
+  labels:
+    key: value
+spec:
+  containers:
+   - name: nginx
+     image: nginx
+     imagePullpolicy: ifnotpresent
+     nodeselector:
+     key: value

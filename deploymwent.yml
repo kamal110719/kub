@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx--1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      key: value
+  template:
+    metadata:
+      name: jaishreeram
+      labels:
+        key: value
+    spec:
+      containers:
+      - name: mynginx
+        image: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service123
+spec:
+  type: NodePort
+  selector:
+    key: value
+  ports:
+    - port: 80
+      targetPort: 80
+

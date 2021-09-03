@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx1
+spec:
+  replicas: 3
+  selector: 
+    matchLabels: 
+      key: value
+  template: 
+    metadata: 
+      name: jaishreeram
+      labels: 
+        key: value
+    spec:
+      containers:
+      - name: myfrontend
+        image: nginx

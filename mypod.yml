@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod-testing1
+spec:
+  nodeName: node1
+  containers:
+    - name: myfrontend
+      image: httpd
+      volumeMounts:
+      - mountPath: "/var/www/html"
+        name: vol3
+  volumes:
+    - name: vol3
+      persistentVolumeClaim:
+        claimName: claim

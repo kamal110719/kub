@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfspv
+spec:
+  capacity:
+    storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: slow
+  mountOptions:
+    - hard
+    - nfsserver=4.1
+  nfs:
+    path: /nfscloud
+    server: 192.168.1.10
+
+

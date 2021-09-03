@@ -1,0 +1,112 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2021-07-26T08:17:38Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: node1
+    kubernetes.io/os: linux
+  name: node1
+  resourceVersion: "7510"
+  uid: 8db5ee8f-809d-4f48-a042-01d384abe70f
+spec: {}
+status:
+  addresses:
+  - address: 192.168.1.10
+    type: InternalIP
+  - address: node1
+    type: Hostname
+  allocatable:
+    cpu: "2"
+    ephemeral-storage: "16415037823"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 2737068Ki
+    pods: "110"
+  capacity:
+    cpu: "2"
+    ephemeral-storage: 17394Mi
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 2839468Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2021-07-26T08:18:29Z"
+    lastTransitionTime: "2021-07-26T08:18:29Z"
+    message: Weave pod has set this
+    reason: WeaveIsUp
+    status: "False"
+    type: NetworkUnavailable
+  - lastHeartbeatTime: "2021-07-26T09:37:15Z"
+    lastTransitionTime: "2021-07-26T09:01:53Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2021-07-26T09:37:15Z"
+    lastTransitionTime: "2021-07-26T09:01:53Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2021-07-26T09:37:15Z"
+    lastTransitionTime: "2021-07-26T09:01:53Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2021-07-26T09:37:15Z"
+    lastTransitionTime: "2021-07-26T09:01:53Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - nginx@sha256:8f335768880da6baf72b70c701002b45f4932acae8d574dedfddaf967fc3ac90
+    - nginx:latest
+    sizeBytes: 133175501
+  - names:
+    - k8s.gcr.io/kube-proxy@sha256:c7778d7b97b2a822c3fe3e921d104ac42afbd38268de8df03557465780886627
+    - k8s.gcr.io/kube-proxy:v1.21.3
+    sizeBytes: 103317641
+  - names:
+    - weaveworks/weave-kube@sha256:d797338e7beb17222e10757b71400d8471bdbd9be13b5da38ce2ebf597fb4e63
+    - weaveworks/weave-kube:2.8.1
+    sizeBytes: 89037656
+  - names:
+    - weaveworks/weave-npc@sha256:38d3e30a97a2260558f8deb0fc4c079442f7347f27c86660dbfc8ca91674f14c
+    - weaveworks/weave-npc:2.8.1
+    sizeBytes: 39273789
+  - names:
+    - k8s.gcr.io/pause@sha256:6c3835cab3980f11b83277305d0d736051c32b17606f5ec59f1dda67c9ba3810
+    - k8s.gcr.io/pause:3.4.1
+    sizeBytes: 682696
+  - names:
+    - hello-world@sha256:df5f5184104426b65967e016ff2ac0bfcd44ad7899ca3bbcf8e44e4461491a9e
+    - hello-world:latest
+    sizeBytes: 13336
+  nodeInfo:
+    architecture: amd64
+    bootID: e35deb4d-3a22-43f5-8c93-1fca10578046
+    containerRuntimeVersion: docker://20.10.7
+    kernelVersion: 4.18.0-240.el8.x86_64
+    kubeProxyVersion: v1.21.3
+    kubeletVersion: v1.21.3
+    machineID: 6fd38650569649aaa7163f8786600e58
+    operatingSystem: linux
+    osImage: CentOS Linux 8
+    systemUUID: 01d94d56-e72c-beba-fafb-e9f0ce580c3f
